@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script> 
+function cambiaColor(){ 
+   	var i 
+   	for (i=0;i<document.fcolores.colorin.length;i++){ 
+      	if (document.fcolores.colorin[i].checked) 
+         	break; 
+   	} 
+   	document.bgColor = document.fcolores.colorin[i].value 
+	
+	if (document.fcolores.colorin[0].checked)
+	{alert ("Correcto ! usted no es gay como el KEVIN MILAN");}
+	else {alert ("Ustede me esta hablando en serio?!")}
+	
+}
+</script> 
+
+
+<title>Colorsitos</title>
+</head>
+
+<body>
+
+<p> De que color es el fondo de la pagina???</p>
+<form name=fcolores> 
+<span style="text-align: center">
+<input type="Radio" name="colorin" value="ffffff" checked> 
+Blanco 
+<br> 
+<input type="Radio" name="colorin" value="ff0000"> Rojo 
+<br> 
+<input type="Radio" name="colorin" value="00ff00"> Verde 
+<br> 
+</span><br> 
+<br> 
+<input type="Button" name="" value="Cambia Color" onclick="cambiaColor()"> 
+</form> 
+  
+</div>
+<span style="text-align: right"></span><span style="text-align: justify"></span>
+</body>
+</html>
