@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ingresar a la Pagina</title>
+<script>
+		function validacion(id){
+			var elem=document.getElementById(id);
+			if(elem.checkValidity())
+				elem.style.bordercolor="blue";
+			else
+				elem.style.bordercolor="red";
+		}
+		function enviado()
+		{
+			var usuarioValido=document.getElementById('n_usuario').checkValidity();
+			var pwdValido=document.getElementById('pwd').checkValidity();
+			if (usuarioValido && pwdValido)
+				alert("La informacion fue enviada exitosamente");
+			else
+				alert("Porfavor revise los campos");
+		}
+	</script>
+<style type="text/css" >
+	#caja
+	{
+          background-color: #A4A4A4;
+          width: 200px;
+          border: 2px solid black;
+          margin: 200px auto;
+          padding: 1em;
+          border-radius: 9px;
+	}
+	h1, h2, h3, h4
+	{
+		font-family: arial black;
+		color: #0489B1;
+	}
+	input[type = text], input[type=password]
+	{
+		margin: 0 0 1em 0;
+		width: 200px
+		border: 5px;
+		padding: 5px;
+		border-radius: 3px
+	}
+	input[type = submit], form a
+	{
+         padding: 1em;
+                
+         border: none;
+         color: black;       
+         font-family: arial black;
+         font-size: 14px;
+         border-radius: 2px;
+	}
+
+    body
+    {
+    	background-color: #0B173B;
+	}
+</style>
+</head>
+<body>
+
+<div id="caja">
+      <h2>Login</h2>
+      <form method="POST" action="competencia.html" sref="competencia.html"> 
+ 	     UserName: <input type="text"  maxlength="10"name="n_usuario" id="n_usuario" oninput="validacion('n_usuario')" maxlength<="10" /><br/>
+ 	     <br/>
+ 	     Password: <input type="password" maxlength="10" name="pwd" id="pwd" oninput="validacion ('pwd')" required /><br/>
+
+ 	     <input type="submit" value="Iniciar Sesion" oninput="Ingresado" sref="index.html"/>
+
+
+ 	     <br/>
+ 	            No tienes cuenta?!!
+         <br/>
+       
+      </form>
+      <a href="NuevoUsuario.html">Registrarse</a>
+
+ </div>
+           
+</body>
+</html>
